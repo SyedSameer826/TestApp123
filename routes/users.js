@@ -1,0 +1,10 @@
+const express = require('express');
+const router = express.Router();
+const {getUsers,getUsersById,addUser,updateUser,updateStatus,deleteUser} =require('../Controllers/users');
+router.post('/',getUsersById);
+router.post('/updateuser',updateUser);
+router.post('/deleteuser',deleteUser);
+router.post('/updatestatus',updateStatus);
+router.get('/',getUsers);
+router.post('/add-user',addUser);
+module.exports = router;
